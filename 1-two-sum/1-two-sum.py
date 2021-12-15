@@ -1,10 +1,11 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        # iter over vals, saving map of format {target: index}
+        # general how I will approach this is 
+        # map of the form { target: index }
         targetMap = {}
-        for idx, num in enumerate(nums):
+        for i, num in enumerate(nums):
             if num not in targetMap:
-                targetMap[target - num] = idx
+                targetMap[target - num] = i
             else:
-                return [targetMap[num], idx]
+                return [targetMap[num], i]
         
